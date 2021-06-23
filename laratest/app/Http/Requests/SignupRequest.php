@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LoginRequest extends FormRequest
+class SignupRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,13 +25,7 @@ class LoginRequest extends FormRequest
     {
         return [
             'email' => 'required|max:50',
-            'password' => 'required|min:8|max:50|regex:/^[\w-]*$/',
-            
-
-            // ^ - start of string
-            // [\w-]* - zero or more word chars from the [a-zA-Z0-9_] range or -s
-            // $ - end of string.
-            // 'password' => 'regex:/^[\w-]*$/'
+            'password' => 'required|min:8|max:50'
         ];
     }
     // public function messages(){

@@ -18,9 +18,9 @@ class LoginController extends Controller
         if($req->email == $req->password){
             return redirect('/home');
         }
-         else
-         {
-             echo "Invalid User";
-         }
+        else
+        {
+            echo "Invalid User";
+        }
     }
 }
