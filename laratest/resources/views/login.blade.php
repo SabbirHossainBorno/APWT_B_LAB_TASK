@@ -8,6 +8,7 @@
 </head>
 <body>
     <form method="POST">
+    @csrf
     <table>
         <tr>
 			<td>Email</td>
@@ -19,8 +20,13 @@
 		</tr>
 		<tr>
 			<td></td>
-			<td><input type="submit" name="Submit" value="Login">
-            <input type="submit" name="Submit" value="Signup"></td>
+			<td>
+                <input type="submit" name="Submit" value="Login">
+                
+                <input type="button" name="Signup" value="Sign Up" onclick="window.location='{{route('signup.index')}}'">
+                
+            </td>
+            
 		</tr>
 
         </table>
